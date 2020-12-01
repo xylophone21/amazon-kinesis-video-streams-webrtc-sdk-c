@@ -297,7 +297,8 @@ PVOID sendAudioPackets(PVOID args)
         }
 
         // Re-alloc if needed
-        if (frameSize > pSampleConfiguration->audioBufferSize) {
+        if (frameSize > pSampleConfiguration->audioBufferSize)
+        {
             pSampleConfiguration->pAudioFrameBuffer = (UINT8*) MEMREALLOC(pSampleConfiguration->pAudioFrameBuffer, frameSize);
             if (pSampleConfiguration->pAudioFrameBuffer == NULL) {
                 printf("[KVS Master] Audio frame Buffer reallocation failed...%s (code %d)\n", strerror(errno), errno);
@@ -318,7 +319,8 @@ PVOID sendAudioPackets(PVOID args)
         frame.presentationTs += SAMPLE_AUDIO_FRAME_DURATION;
 
         MUTEX_LOCK(pSampleConfiguration->streamingSessionListReadLock);
-        for (i = 0; i < pSampleConfiguration->streamingSessionCount; ++i) {
+        for (i = 0; i < pSampleConfiguration->streamingSessionCount; ++i)
+        {
             status = writeFrame(pSampleConfiguration->sampleStreamingSessionList[i]->pAudioRtcRtpTransceiver, &frame);
             if (status != STATUS_SRTP_NOT_READY_YET) {
                 if (status != STATUS_SUCCESS) {
@@ -337,7 +339,8 @@ CleanUp:
     return (PVOID)(ULONG_PTR) retStatus;
 }
 
-PVOID sampleReceiveVideoFrame(PVOID args) {
+PVOID sampleReceiveVideoFrame(PVOID args)
+{
     STATUS retStatus = STATUS_SUCCESS;
     PSampleStreamingSession pSampleStreamingSession = (PSampleStreamingSession) args;
     if (pSampleStreamingSession == NULL) {
@@ -346,8 +349,7 @@ PVOID sampleReceiveVideoFrame(PVOID args) {
     }
 
     retStatus = transceiverOnFrame(pSampleStreamingSession->pVideoRtcRtpTransceiver, (UINT64) pSampleStreamingSession, sampleFrameHandler);
-    if (retStatus != STATUS_SUCCESS)
-    {
+    if (retStatus != STATUS_SUCCESS) {
         printf("[KVS Master] transceiverOnFrame(): operation returned status code: 0x%08x \n", retStatus);
         goto CleanUp;
     }
