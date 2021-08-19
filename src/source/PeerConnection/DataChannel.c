@@ -105,3 +105,19 @@ CleanUp:
     LEAVES();
     return retStatus;
 }
+
+STATUS dataChannelOnClose(PRtcDataChannel pRtcDataChannel, UINT64 customData, RtcOnClose rtcOnClose)
+{
+    ENTERS();
+    STATUS retStatus = STATUS_SUCCESS;
+    PKvsDataChannel pKvsDataChannel = (PKvsDataChannel) pRtcDataChannel;
+    CHK(pKvsDataChannel != NULL && rtcOnOpen != NULL, STATUS_NULL_ARG);
+
+    pKvsDataChannel->onClose = rtcOnClose;
+    pKvsDataChannel->onCloseCustomData = customData;
+}
+
+STATUS dataChannelClose(PRtcDataChannel pRtcDataChannel)
+{
+
+}

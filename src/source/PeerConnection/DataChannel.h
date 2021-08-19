@@ -23,7 +23,9 @@ typedef struct {
     RtcDataChannelStats rtcDataChannelDiagnostics;
 
     UINT64 onOpenCustomData;
+    UINT64 onCloseCustomData;
     RtcOnOpen onOpen;
+    RtcOnClose onClose;
 } KvsDataChannel, *PKvsDataChannel;
 
 #ifdef __cplusplus

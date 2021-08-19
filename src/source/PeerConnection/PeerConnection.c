@@ -79,6 +79,7 @@ STATUS allocateSctp(PKvsPeerConnection pKvsPeerConnection)
     sctpSessionCallbacks.outboundPacketFunc = onSctpSessionOutboundPacket;
     sctpSessionCallbacks.dataChannelMessageFunc = onSctpSessionDataChannelMessage;
     sctpSessionCallbacks.dataChannelOpenFunc = onSctpSessionDataChannelOpen;
+    sctpSessionCallbacks.dataChannelCloseFunc = onSctpSessionDataChannelClose();
     sctpSessionCallbacks.customData = (UINT64) pKvsPeerConnection;
     CHK_STATUS(createSctpSession(&sctpSessionCallbacks, &(pKvsPeerConnection->pSctpSession)));
 
@@ -546,6 +547,34 @@ VOID onSctpSessionDataChannelOpen(UINT64 customData, UINT32 channelId, PBYTE pNa
     pKvsPeerConnection->onDataChannel(pKvsPeerConnection->onDataChannelCustomData, &(pKvsDataChannel->dataChannel));
 
 CleanUp:
+
+    CHK_LOG_ERR(retStatus);
+}
+
+VOID onSctpSessionDataChannelClose(UINT64 customData, UINT32 channelId, PBYTE pName, UINT32 nameLen)
+{
+    STATUS retStatus = STATUS_SUCCESS;
+    PKvsPeerConnection pKvsPeerConnection = (PKvsPeerConnection) customData;
+    PKvsDataChannel pKvsDataChannel = NULL;
+
+    CHK(pKvsPeerConnection != NULL && pKvsPeerConnection->onDataChannel != NULL, STATUS_NULL_ARG);
+
+    pKvsDataChannel = (PKvsDataChannel) MEMCALLOC(1, SIZEOF(KvsDataChannel));
+    CHK(pKvsDataChannel != NULL, STATUS_NOT_ENOUGH_MEMORY);
+
+    STRNCPY(pKvsDataChannel->dataChannel.name, (PCHAR) pName, nameLen);
+    pKvsDataChannel->dataChannel.id = channelId;
+    pKvsDataChannel->pRtcPeerConnection = (PRtcPeerConnection) pKvsPeerConnection;
+    pKvsDataChannel->channelId = channelId;
+
+    // Set the data channel parameters when data channel is created by peer
+    pKvsDataChannel->rtcDataChannelDiagnostics.dataChannelIdentifier = channelId;
+    pKvsDataChannel->rtcDataChannelDiagnostics.state = RTC_DATA_CHANNEL_STATE_OPEN;
+    STRNCPY(pKvsDataChannel->rtcDataChannelDiagnostics.label, (PCHAR) pName, nameLen);
+    CHK_STATUS(hashTablePut(pKvsPeerConnection->pDataChannels, channelId, (UINT64) pKvsDataChannel));
+    pKvsPeerConnection->onDataChannel(pKvsPeerConnection->onDataChannelCustomData, &(pKvsDataChannel->dataChannel));
+
+    CleanUp:
 
     CHK_LOG_ERR(retStatus);
 }

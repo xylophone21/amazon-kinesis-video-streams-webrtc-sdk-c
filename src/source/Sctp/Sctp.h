@@ -56,6 +56,7 @@ typedef struct {
     SctpSessionOutboundPacketFunc outboundPacketFunc;
     SctpSessionDataChannelOpenFunc dataChannelOpenFunc;
     SctpSessionDataChannelMessageFunc dataChannelMessageFunc;
+    SctpSessionDataChannelCloseFunc dataChannelCloseFunc;
 } SctpSessionCallbacks, *PSctpSessionCallbacks;
 
 typedef struct {

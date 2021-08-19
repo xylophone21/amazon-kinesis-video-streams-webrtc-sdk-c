@@ -2577,6 +2577,7 @@ STATUS iceAgentCheckPeerReflexiveCandidate(PIceAgent pIceAgent, PKvsIpAddress pI
         pLocalIceCandidate->iceCandidateType = ICE_CANDIDATE_TYPE_PEER_REFLEXIVE;
         pLocalIceCandidate->ipAddress = *pIpAddress;
         iceAgentLogNewCandidate(pLocalIceCandidate);
+        DLOGD("Detected local peer reflexive ICE Candidate");
         CHK(FALSE, retStatus);
     }
 

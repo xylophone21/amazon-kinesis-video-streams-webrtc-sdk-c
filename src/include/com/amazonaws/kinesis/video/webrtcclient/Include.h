@@ -925,6 +925,13 @@ typedef VOID (*RtcOnMessage)(UINT64, PRtcDataChannel, BOOL, PBYTE, UINT32);
 typedef VOID (*RtcOnOpen)(UINT64, PRtcDataChannel);
 
 /**
+ * RtcOnClose is fired when the underlying socket is closed
+ *
+ * Reference: https://www.w3.org/TR/webrtc/#dom-rtcdatachannel-onclose
+ */
+typedef VOID (*RtcOnClose)(UINT64, PRtcDataChannel);
+
+/**
  * @brief RtcOnDataChannel is fired when the remote PeerConnection
  * creates a new DataChannel
  *
@@ -1812,6 +1819,17 @@ PUBLIC_API STATUS dataChannelOnMessage(PRtcDataChannel, UINT64, RtcOnMessage);
  * @return STATUS code of the execution. STATUS_SUCCESS on success
  */
 PUBLIC_API STATUS dataChannelOnOpen(PRtcDataChannel, UINT64, RtcOnOpen);
+
+/**
+ * @brief Set a callback for data channel close
+ *
+ * @param[in] PRtcDataChannel Data channel struct created by createDataChannel()
+ * @param[in] UINT64 User customData that will be passed along when RtcOnClose is called
+ * @param[in] RtcOnClose User RtcOnClose callback
+ *
+ * @return STATUS code of the execution. STATUS_SUCCESS on success
+ */
+PUBLIC_API STATUS dataChannelOnClose(PRtcDataChannel, UINT64, RtcOnClose);
 
 /**
  * @brief Send data via the PRtcDataChannel
