@@ -3,6 +3,7 @@
 extern PSampleConfiguration gSampleConfiguration;
 
 // #define VERBOSE
+#define IOT_CORE_ENABLE_CREDENTIALS
 
 INT32 main(INT32 argc, CHAR* argv[])
 {
