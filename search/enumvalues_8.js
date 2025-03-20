@@ -10,16 +10,7 @@ var searchData=
   ['turn_5fpeer_5fconn_5fstate_5fcreate_5fpermission_7',['TURN_PEER_CONN_STATE_CREATE_PERMISSION',['../TurnConnection_8h.html#a55eb4c6ede27be47adf8277f73a5c656ac4ef76d4c17eca52e75e22af42aafba5',1,'TurnConnection.h']]],
   ['turn_5fpeer_5fconn_5fstate_5ffailed_8',['TURN_PEER_CONN_STATE_FAILED',['../TurnConnection_8h.html#a55eb4c6ede27be47adf8277f73a5c656a17792594d3f855622ad695a7ad9d6e81',1,'TurnConnection.h']]],
   ['turn_5fpeer_5fconn_5fstate_5fready_9',['TURN_PEER_CONN_STATE_READY',['../TurnConnection_8h.html#a55eb4c6ede27be47adf8277f73a5c656a9f8ecc0341cbdbab06311a467bb336ae',1,'TurnConnection.h']]],
-  ['turn_5fstate_5fallocation_10',['TURN_STATE_ALLOCATION',['../TurnConnection_8h.html#abf499a86fd3159f2d04a885cd0d9323fa4420f5c6be6171d8a5af51e4da239e83',1,'TurnConnection.h']]],
-  ['turn_5fstate_5fbind_5fchannel_11',['TURN_STATE_BIND_CHANNEL',['../TurnConnection_8h.html#abf499a86fd3159f2d04a885cd0d9323faaf46a2aad370d32f80eafcfc02aa7dcd',1,'TurnConnection.h']]],
-  ['turn_5fstate_5fcheck_5fsocket_5fconnection_12',['TURN_STATE_CHECK_SOCKET_CONNECTION',['../TurnConnection_8h.html#abf499a86fd3159f2d04a885cd0d9323faee3f4b59203b0c49c339674fd88705d8',1,'TurnConnection.h']]],
-  ['turn_5fstate_5fclean_5fup_13',['TURN_STATE_CLEAN_UP',['../TurnConnection_8h.html#abf499a86fd3159f2d04a885cd0d9323fa7e579c0e60f9c93a308c8fd6d6178432',1,'TurnConnection.h']]],
-  ['turn_5fstate_5fcreate_5fpermission_14',['TURN_STATE_CREATE_PERMISSION',['../TurnConnection_8h.html#abf499a86fd3159f2d04a885cd0d9323faab4f45e7354327e5256bddd898dbc735',1,'TurnConnection.h']]],
-  ['turn_5fstate_5ffailed_15',['TURN_STATE_FAILED',['../TurnConnection_8h.html#abf499a86fd3159f2d04a885cd0d9323fac10546d5a7eed21e4f5ef4be9f81c7d3',1,'TurnConnection.h']]],
-  ['turn_5fstate_5fget_5fcredentials_16',['TURN_STATE_GET_CREDENTIALS',['../TurnConnection_8h.html#abf499a86fd3159f2d04a885cd0d9323fa88327b8cef512f02c8f01a8972494be8',1,'TurnConnection.h']]],
-  ['turn_5fstate_5fnew_17',['TURN_STATE_NEW',['../TurnConnection_8h.html#abf499a86fd3159f2d04a885cd0d9323fa0c7f32846f258a5ca96745cd1b61eb04',1,'TurnConnection.h']]],
-  ['turn_5fstate_5fready_18',['TURN_STATE_READY',['../TurnConnection_8h.html#abf499a86fd3159f2d04a885cd0d9323fa74df97fdbf74316e2aa21c0cf701982e',1,'TurnConnection.h']]],
-  ['twcc_5fstatus_5fsymbol_5flargedelta_19',['TWCC_STATUS_SYMBOL_LARGEDELTA',['../Rtcp_8h.html#a21ec0b7d62f75b6f30fa0ea3491769d0a13eb64d7b436849ed3e5010ce05225dd',1,'Rtcp.h']]],
-  ['twcc_5fstatus_5fsymbol_5fnotreceived_20',['TWCC_STATUS_SYMBOL_NOTRECEIVED',['../Rtcp_8h.html#a21ec0b7d62f75b6f30fa0ea3491769d0a59ad34f86ce80c658570827be280534b',1,'Rtcp.h']]],
-  ['twcc_5fstatus_5fsymbol_5fsmalldelta_21',['TWCC_STATUS_SYMBOL_SMALLDELTA',['../Rtcp_8h.html#a21ec0b7d62f75b6f30fa0ea3491769d0a8686a526a95dae4f6695ead1bcbfa6c5',1,'Rtcp.h']]]
+  ['twcc_5fstatus_5fsymbol_5flargedelta_10',['TWCC_STATUS_SYMBOL_LARGEDELTA',['../Rtcp_8h.html#a21ec0b7d62f75b6f30fa0ea3491769d0a13eb64d7b436849ed3e5010ce05225dd',1,'Rtcp.h']]],
+  ['twcc_5fstatus_5fsymbol_5fnotreceived_11',['TWCC_STATUS_SYMBOL_NOTRECEIVED',['../Rtcp_8h.html#a21ec0b7d62f75b6f30fa0ea3491769d0a59ad34f86ce80c658570827be280534b',1,'Rtcp.h']]],
+  ['twcc_5fstatus_5fsymbol_5fsmalldelta_12',['TWCC_STATUS_SYMBOL_SMALLDELTA',['../Rtcp_8h.html#a21ec0b7d62f75b6f30fa0ea3491769d0a8686a526a95dae4f6695ead1bcbfa6c5',1,'Rtcp.h']]]
 ];

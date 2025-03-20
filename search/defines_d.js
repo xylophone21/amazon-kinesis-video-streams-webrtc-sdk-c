@@ -8,7 +8,7 @@ var searchData=
   ['nat_5fbehavior_5fnone_5fstr_5',['NAT_BEHAVIOR_NONE_STR',['../NatBehaviorDiscovery_8h.html#a9dd3f2f3fcd96058f3d6a15caf4753ed',1,'NatBehaviorDiscovery.h']]],
   ['nat_5fbehavior_5fnot_5fbehind_5fany_5fnat_5fstr_6',['NAT_BEHAVIOR_NOT_BEHIND_ANY_NAT_STR',['../NatBehaviorDiscovery_8h.html#a9ae590a52482baf877b60c52a234ff4d',1,'NatBehaviorDiscovery.h']]],
   ['nat_5fbehavior_5fport_5fdependent_5fstr_7',['NAT_BEHAVIOR_PORT_DEPENDENT_STR',['../NatBehaviorDiscovery_8h.html#a60bc864c7fb0ab03872003ee17f29306',1,'NatBehaviorDiscovery.h']]],
-  ['no_5fsignal_8',['NO_SIGNAL',['../Network_8h.html#a8ad08693e8b631fa6c0965bfa82283af',1,'Network.h']]],
+  ['no_5fsignal_5fsend_8',['NO_SIGNAL_SEND',['../Network_8h.html#af38006bfbb4f3cf5fa8a5a3619515793',1,'Network.h']]],
   ['ntp_5foffset_9',['NTP_OFFSET',['../RtcpPacket_8h.html#aa7c3e93bff90674e9e74de6bdec85613',1,'RtcpPacket.h']]],
   ['ntp_5ftimescale_10',['NTP_TIMESCALE',['../RtcpPacket_8h.html#a5e357595eb8cff7ee54e3915bf72b505',1,'RtcpPacket.h']]]
 ];
